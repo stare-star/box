@@ -1,0 +1,36 @@
+<!--pages/suggestion/suggestions.wxml-->
+<text>pages/suggestion/suggestions.wxml</text>
+
+<view class="container">
+<view class="itemView">联系方式：
+    <input class="input"name="contact"placeholder="请选填联系方式，方便进一步沟通" 
+    bindinput="contactInput"/>
+  </view>
+/*<view class="itemView">反馈内容：
+    <input class="input"name="content" placeholder="请输入反馈的具体内容" maxlength=-1
+     bindinput="contentInput" />
+  </view>*/
+
+<view class="section">反馈内容：
+  <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+</view>
+
+  <text>{{ infoMess}}</text>
+  <text>{{ passWd}}</text>
+
+<view class="viewName"style="background-color:#fbf9fe">
+  <button class="commitBtn"bindtap="commitBtnClick">提交</button>
+
+</view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="form 中的 textarea" name="textarea"/>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>
