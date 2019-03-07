@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/suggestion/suggestions"
+    "pages/suggestion/suggestions",
+    "pages/suggestion/success"
   ],
   "window": {
     "backgroundTextStyle": "light",

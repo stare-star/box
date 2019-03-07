@@ -1,1 +1,12 @@
 /* pages/suggestion/suggestions.wxss */
+.btn {
+  width: 90%;
+  margin-top: 30rpx;
+  border: 0;
+  background-color: rgba(0, 0,0, 0);
+  color: #FFCC00;
+}
+
+.btn_hover {
+  background-color: green;
+}

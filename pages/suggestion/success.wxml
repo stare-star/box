@@ -1,0 +1,7 @@
+<!--pages/suggestion/success.wxml-->
+
+<text>反馈成功</text>
+<text>您的反馈编号为{{uuid}}</text>
+
+
+<text>{{time}}</text>

@@ -1,36 +1,40 @@
 <!--pages/suggestion/suggestions.wxml-->
-<text>pages/suggestion/suggestions.wxml</text>
 
 <view class="container">
 <view class="itemView">联系方式：
-    <input class="input"name="contact"placeholder="请选填联系方式，方便进一步沟通" 
+    <input class="input"name="contact"placeholder="建议填写，方便联系" 
     bindinput="contactInput"/>
   </view>
-/*<view class="itemView">反馈内容：
-    <input class="input"name="content" placeholder="请输入反馈的具体内容" maxlength=-1
-     bindinput="contentInput" />
-  </view>*/
+
+
+<view>
+  <view>我要向{{zuzhi}}进行反馈</view>
+  <picker-view
+    indicator-style="height:50px;"
+    style="width: 100%; height: 100px;"
+    value="{{value}}"
+    bindchange="bindChange"
+  >
+    <picker-view-column>
+      <view wx:for="{{array}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+  
+  </picker-view>
+</view>
+
 
 <view class="section">反馈内容：
-  <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+  <textarea placeholder="可输入300字左右的反馈内容" maxlength='400' style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98)"auto-focus bindinput='contentInput' />
 </view>
 
   <text>{{ infoMess}}</text>
-  <text>{{ passWd}}</text>
 
-<view class="viewName"style="background-color:#fbf9fe">
-  <button class="commitBtn"bindtap="commitBtnClick">提交</button>
+
+<view class="btn">
+  <button class="commitBtn"bindtap="commitBtnClick" hover-class='btn_hover'>提交</button>
 
 </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
-
-
-<view class="section">
-  <form bindsubmit="bindFormSubmit">
-    <textarea placeholder="form 中的 textarea" name="textarea"/>
-    <button form-type="submit"> 提交 </button>
-  </form>
 </view>
