@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/suggestion/suggestions",
-    "pages/suggestion/success"
+    "pages/suggestion/success",
+    "pages/option/options"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,10 +20,9 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/suggestion/suggestions",
+        "pagePath": "pages/option/options",
         "text": "反馈中心"
       }
     ]
   }
-
 }

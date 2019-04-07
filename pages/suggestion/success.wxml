@@ -1,7 +1,16 @@
 <!--pages/suggestion/success.wxml-->
 
+
+<view class="intro">
+  <block>
+    <icon type="success" size='120'/>
+  </block>
+</view>
+
+<view class='view_top'>
 <text>反馈成功</text>
-<text>您的反馈编号为{{uuid}}</text>
+</view>
 
-
+<view class='view_bottom'>
 <text>{{time}}</text>
+</view>

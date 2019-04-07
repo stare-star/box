@@ -1,1 +1,24 @@
 /* pages/suggestion/success.wxss */
+
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.view_top{
+  width: 100%;
+  margin-top: 30rpx;
+  font-size: 50rpx;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.view_bottom{
+  position: fixed;
+  text-align: center;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+
+}

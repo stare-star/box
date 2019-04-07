@@ -11,9 +11,9 @@ Page({
     uuid:'',
     contact: '',
     content: '',
-    zuzhi:'传媒中心',
+    zuzhi:'团学组织工作',
     value:[0],
-    array: ['传媒中心', '学生会', '科协','团委' ],
+    array: ['团学组织工作','奖助学金等评奖评优工作','就业服务','心理健康教育','社区管理'],
   },
 
 bindChange:function(e){
