@@ -69,8 +69,13 @@ Page({
 
     app.zuzhi = e.currentTarget.dataset.zuzhi;
     console.log(app.zuzhi)
-
+    wx.showToast({
+      title: '成功',
+      icon: 'loading',
+      duration: 500
+    }),
     wx.navigateTo({
+     
       url: '../suggestion/suggestions' 
     })
   },

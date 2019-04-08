@@ -27,8 +27,7 @@
 
 
 <view class="btn">
-  <button class="commitBtn"bindtap="commitBtnClick" hover-class='btn_hover'>提交</button>
-
+  <button class="commitBtn"bindtap="commitBtnClick"  hover-class='btn_hover'>提交</button>
 </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

@@ -1,4 +1,6 @@
 // pages/suggestion/success.js
+
+wx.cloud.init()
 Page({
 
   /**
