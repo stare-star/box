@@ -1,4 +1,7 @@
 <!--pages/suggestion/suggestions.wxml-->
+<view class ='title'>
+<text> {{zuzhi}}</text>
+</view>
 
 <view class="container">
  <view class="bg" >
@@ -14,22 +17,6 @@
     <input class="input"name="contact"placeholder="建议填写，方便联系" 
     bindinput="contactInput"/>
   </view>
-
-
-<view>
-  <view>我对{{zuzhi}}有问题</view>
-  <picker-view
-    indicator-style="height:50px;"
-    style="width: 100%; height: 100px;"
-    value="{{value}}"
-    bindchange="bindChange"
-  >
-    <picker-view-column>
-      <view wx:for="{{array}}" style="line-height: 50px">{{item}}</view>
-    </picker-view-column>
-  
-  </picker-view>
-</view>
 
 
 <view class="section">反馈内容：

@@ -6,15 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-    indicatorDots: true,
+    option: [
+    {  
+      url: 'League_Organization.png',
+      name: '团学组织工作'
+    }, 
+    {
+      url: 'scholarship.png',
+      name: '奖助学金等评奖评优工作'
+      }, 
+      {
+        url: 'Employment_services.jpg',
+        name: '就业服务'
+      }, 
+      {
+        url: 'Mental_health.jpg',
+        name: '心理健康教育'
+      }, 
+      {
+        url: 'Community_management.jpg',
+        name: '社区管理'
+      }, 
+    ],
+    indicatorDots: false,
     vertical: false,
-    autoplay: false,
-    circular: false,
+    autoplay: true,
+    circular: true,
     interval: 2000,
     duration: 500,
-    previousMargin: 0,
-    nextMargin: 0
+    previousMargin: 30,
+    nextMargin: 30
   },
   changeProperty: function (e) {
     var propertyName = e.currentTarget.dataset.propertyName
@@ -43,44 +64,15 @@ Page({
     })
   },
 
-  commitBtnClick: function () {
-    console.log('点击')
-    if (this.data.content.length == 0) {
-      this.setData({
-        infoMess: "温馨提示：反馈内容不能为空"
-      })
-    } else {
-      console.log("提交"),
-        this.setData({
-          infoMess: ''
-        })
-      wx.request({
-        url: 'https://wx.starfishs.cn/wxcm/Service/Commit',
-        method: 'post',
-        data: {
-          contact: this.data.contact,
-          content: this.data.content,
-          towho: this.data.zuzhi
-        },
-        header: {
-          "content-type": 'application/x-www-form-urlencoded'
-        },
-        success: function (res) {
-          console.log(res.data)
+  commitBtnClick: function (e) {
 
 
-          app.res_uuid = res.data.uuid,
-            app.res_time = res.data.time
+    app.zuzhi = e.currentTarget.dataset.zuzhi;
+    console.log(app.zuzhi)
 
-
-          wx.navigateTo({
-            url: '../suggestion/suggestions'
-
-          })
-        }
-      }
-      )
-    }
+    wx.navigateTo({
+      url: '../suggestion/suggestions' 
+    })
   },
 
   /**

@@ -1,40 +1,41 @@
 <!--pages/change/change.wxml-->
 
 
-<view class="page-body">
+<view class="bg" >
+  <image class="bg" mode="scaleToFill"src="backpicture.jpg"></image>
+</view>
+
+<view class="btn">
+<test > 物联网院意见箱
+</test>
+</view>
+
+
+<view class="page-body center">
     <view class="page-section page-section-spacing swiper">
-      <swiper
+      <swiper  style="height:400px" 
         indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
         interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-        <block wx:for="{{background}}" wx:key="*this">
+        <block wx:for="{{option}}" wx:key="*this">
           <swiper-item>
+          <view class="title">
+          <text> {{item.name}}</text>
+          </view>
+          
+          <image
+          style="width: 200px; height: 250px; background-color: #eeeeee; border: 2px; border-radius: 25px;                           box-shadow: 10px 10px 5px #888888;" 
+          mode="{{item.url}}"
+          src="{{item.url}}">
+            </image>
+            
+             <button class="bt" bindtap="commitBtnClick" hover-class='btn_hover' data-zuzhi= '{{item.name}}'>我要反馈</button>
+
             <view class="swiper-item {{item}}"></view>
           </swiper-item>
         </block>
       </swiper>
     </view>
-    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_switch">
-          <view class="weui-cell__bd">指示点</view>
-          <view class="weui-cell__ft">
-            <switch checked="{{indicatorDots}}" bindchange="changeProperty" data-property-name="indicatorDots" />
-          </view>
-        </view>
-        <view class="weui-cell weui-cell_switch">
-          <view class="weui-cell__bd">自动播放</view>
-          <view class="weui-cell__ft">
-            <switch checked="{{autoplay}}" bindchange="changeProperty" data-property-name="autoplay" />
-          </view>
-        </view>
-      </view>
-    </view>
+
 </view>
 
-
-<view class="container">
-<view class="btn">
-  <button class="commitBtn"bindtap="commitBtnClick" hover-class='btn_hover'>我要反馈</button>
-</view>
-</view>
 

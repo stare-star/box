@@ -10,18 +10,11 @@ Page({
     infoMess: '',
     uuid:'',
     contact: '',
-    content: '',
-    zuzhi:'团学组织工作',
+    content: '团学组织工作',
+    zuzhi:app.zuzhi,
     value:[0],
-    array: ['团学组织工作','奖助学金等评奖评优工作','就业服务','心理健康教育','社区管理'],
   },
 
-bindChange:function(e){
-  const val =e.detail.value
-  this.setData({
-    zuzhi:this.data.array[val[0]]
-  })
-},
   contactInput: function(e) {
     this.setData({
       contact: e.detail.value
@@ -92,7 +85,9 @@ onReady: function() {
  * 生命周期函数--监听页面显示
  */
 onShow: function() {
-
+  this.setData({
+    zuzhi: getApp().zuzhi,
+  })
 },
 
 /**
